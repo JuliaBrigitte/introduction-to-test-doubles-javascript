@@ -1,0 +1,42 @@
+Test Doubles
+
+Arrange, Act, Assert
+Arrange, Act, Assert is a useful structure to help you plan and write your tests.
+Arrange
+	•	Arranging any test data and objects you might need to run your unit test
+Act
+	•	This is your action, what you do to run your code to produce a result i.e. calling your function
+Assert
+	•	What you’re expecting to see i.e. what your function should(!) return
+	•	The assertion compares your actual result vs. your expected result
+
+System under Test SUT
+Test Double
+A dummy to facilitate testing - A test double is any kind of pretend object used in place of a real object for testing purposes.
+
+Dummy Object
+ used when a parameter is needed for the tested method but without actually needing to use the parameter.
+Example of an test object
+dummyPaymentDetails = {
+  name: 'Some person',
+  address: '123 Some Street',
+  debitCard: {
+    digits: '123456',
+  },
+};
+
+Test Stub
+used for providing the tested code with "indirect input".
+An object designed with functions returning hardcoded/pre-defined responses.
+
+Mock
+Mock object — used for verifying "indirect output" of the tested code, by first defining the expectations before the tested code is executed.
+Mock objects enable you to check (verify) that expected calls and actions have been performed,
+e.g. checking a function has been called an expected number of times.
+
+Spy
+used for verifying "indirect output" of the tested code, by asserting the expectations afterwards, without having defined the expectations before the tested code is executed. It helps in recording information about the indirect object created.
+Spies enable you to focus (spy on) specific functions on a real object.
+
+Fake object
+used as a simpler implementation, e.g. using an in-memory database in the tests instead of doing real database access.
